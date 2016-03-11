@@ -15,6 +15,7 @@
 		24EBF1ED1C9264AB00A83AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24EBF1EB1C9264AB00A83AF4 /* LaunchScreen.storyboard */; };
 		24EBF1F81C9264AB00A83AF4 /* MGKeywordsViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBF1F71C9264AB00A83AF4 /* MGKeywordsViewTests.m */; };
 		24EBF2031C9264AB00A83AF4 /* MGKeywordsViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBF2021C9264AB00A83AF4 /* MGKeywordsViewUITests.m */; };
+		24EBF2131C926A4F00A83AF4 /* MGKeyowrdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBF2121C926A4F00A83AF4 /* MGKeyowrdsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		24EBF1FE1C9264AB00A83AF4 /* MGKeywordsViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGKeywordsViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EBF2021C9264AB00A83AF4 /* MGKeywordsViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGKeywordsViewUITests.m; sourceTree = "<group>"; };
 		24EBF2041C9264AB00A83AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24EBF2111C926A4F00A83AF4 /* MGKeyowrdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGKeyowrdsView.h; sourceTree = "<group>"; };
+		24EBF2121C926A4F00A83AF4 /* MGKeyowrdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGKeyowrdsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		24EBF1DC1C9264AB00A83AF4 /* MGKeywordsView */ = {
 			isa = PBXGroup;
 			children = (
+				24EBF2101C9269A100A83AF4 /* MGKeywordsView */,
 				24EBF1E01C9264AB00A83AF4 /* AppDelegate.h */,
 				24EBF1E11C9264AB00A83AF4 /* AppDelegate.m */,
 				24EBF1E31C9264AB00A83AF4 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				24EBF2041C9264AB00A83AF4 /* Info.plist */,
 			);
 			path = MGKeywordsViewUITests;
+			sourceTree = "<group>";
+		};
+		24EBF2101C9269A100A83AF4 /* MGKeywordsView */ = {
+			isa = PBXGroup;
+			children = (
+				24EBF2111C926A4F00A83AF4 /* MGKeyowrdsView.h */,
+				24EBF2121C926A4F00A83AF4 /* MGKeyowrdsView.m */,
+			);
+			path = MGKeywordsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 			files = (
 				24EBF1E51C9264AB00A83AF4 /* ViewController.m in Sources */,
 				24EBF1E21C9264AB00A83AF4 /* AppDelegate.m in Sources */,
+				24EBF2131C926A4F00A83AF4 /* MGKeyowrdsView.m in Sources */,
 				24EBF1DF1C9264AB00A83AF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
