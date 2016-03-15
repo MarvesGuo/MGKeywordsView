@@ -13,11 +13,10 @@
 
 typedef NS_ENUM(NSInteger, MGKeyowrdsViewType) {
     MGKeyowrdsViewTypeDefault = 0,              //no user interface.
-    MGKeyowrdsViewTypeExampleClick1,            //click
-    MGKeyowrdsViewTypeExampleClick2,            //click
+    MGKeyowrdsViewTypeExampleClick,            //click
+    MGKeyowrdsViewTypeExampleClickAspectFill,   //click
     MGKeyowrdsViewTypeExampleRadio,             //radio
-    MGKeyowrdsViewTypeDiseaseMultiSelect,       //multi-select
-    //
+    MGKeyowrdsViewTypeExampleMultiSelect,       //multi-select
 };
 
 
@@ -29,29 +28,23 @@ typedef NS_ENUM(NSInteger, MGKeyowrdsViewType) {
 @property (nonatomic, weak) id<MGKeyowrdsViewDelegate> delegate;
 
 
-+ (instancetype)keyWordsViewWithType:(MGKeyowrdsViewType)type maxWidth:(CGFloat)maxWidth items:(NSArray<MGKeyowrdsViewItem *> *)items  numberOfLines:(NSInteger)numberOfLines;    //if numberOfLines equal 0,means max number of lines.
-
++ (instancetype)keywordsViewWithType:(MGKeyowrdsViewType)type maxWidth:(CGFloat)maxWidth items:(NSArray<MGKeyowrdsViewItem *> *)items  numberOfLines:(NSInteger)numberOfLines;    //if numberOfLines equal 0,means max number of lines.
 
 - (NSInteger)currentNumberOfLines;
-- (NSInteger)maxNumberOfLines; //不限制最大行数
+- (NSInteger)maxNumberOfLines;
 - (CGFloat)heightWithNumberOfLines:(NSInteger) numberOfLines;
 
-
-//刷新
 - (CGFloat)refreshForNumberOfLines:(NSInteger)lines;
-//单选多选
-- (void)setItemSelectedAtIndex:(NSInteger)index isSelected:(BOOL)isSelected needCallBack:(BOOL)needCallBack;
+- (void)setItemSelectedAtIndex:(NSInteger)index isSelected:(BOOL)isSelected needCallBack:(BOOL)needCallBack;  //for radio\multi-select
 
 
 @end
 
 @protocol MGKeyowrdsViewDelegate <NSObject>
-//Click
--(void)keyWordsView:(MGKeyowrdsView *)keyWordsView didClickedWithIndex:(NSInteger)index item:(MGKeyowrdsViewItem *)item;
-//单选
--(void)keyWordsView:(MGKeyowrdsView *)keyWordsView didRadioedWithIndex:(NSInteger)index item:(MGKeyowrdsViewItem *)item;
-//多选选中的  可能为空数组
--(void)keyWordsView:(MGKeyowrdsView *)keyWordsView didMultiselectChangedWithItems:(NSArray<MGKeyowrdsViewItem *> *)selectedItems;
+
+-(void)mg_keywordsView:(MGKeyowrdsView *)keyWordsView didClickedWithIndex:(NSInteger)index item:(MGKeyowrdsViewItem *)item;
+-(void)mg_keywordsView:(MGKeyowrdsView *)keyWordsView didRadioedWithIndex:(NSInteger)index item:(MGKeyowrdsViewItem *)item;
+-(void)mg_keywordsView:(MGKeyowrdsView *)keyWordsView didMultiselectChangedWithItems:(NSArray<MGKeyowrdsViewItem *> *)selectedItems;    //may return empty array
 
 @end
 

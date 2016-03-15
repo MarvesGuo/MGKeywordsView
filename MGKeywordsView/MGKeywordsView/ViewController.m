@@ -7,10 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "SubViewController.h"
+#import "MGKeyowrdsView.h"
 
 @interface ViewController ()
 
 @end
+
+
+
+
 
 @implementation ViewController
 
@@ -19,9 +25,18 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SubViewController *subVC = [[SubViewController alloc]initWithShowType:indexPath.row];
+    [self.navigationController pushViewController:subVC animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
+
+
+
 
 @end
