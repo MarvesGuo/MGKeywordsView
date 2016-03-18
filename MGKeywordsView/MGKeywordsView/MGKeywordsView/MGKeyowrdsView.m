@@ -407,13 +407,13 @@ typedef NS_ENUM(NSInteger, ShowType) {
             
             _itemsHorizontalSpace = 10;
             _itemsVerticalSpace = 5;
-            _itemInnerLeftSpace = 8;
-            _itemInnerRightSpace = 8;
+            _itemInnerLeftSpace = 12;
+            _itemInnerRightSpace = 12;
             
-            _itemHeight = 25.f;
+            _itemHeight = 30.f;
             
             _textFont = [UIFont systemFontOfSize:12.f];
-            _itemBackgroundColor = [UIColor whiteColor];
+            _itemBackgroundColor = [[UIColor yellowColor]colorWithAlphaComponent:0.5];
             _borderWidth = 0.5;
             _cornerRadius = 3;
             
